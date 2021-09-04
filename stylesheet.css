@@ -1,0 +1,25 @@
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #e5e3dc;
+  color: black;
+}
+
+#box {
+  border: 1px solid blue;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#line {
+  stroke: red;
+  stroke-width: 1.5px;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
