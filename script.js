@@ -11,7 +11,7 @@ const b = 0.1;
 const o = 0;
 const w = Math.sqrt(1- Math.pow(b,2));
 
-const DURATION =100;
+const DURATION =200;
 const STEP = 5;
 
 let animationId = 0;
@@ -33,25 +33,24 @@ function createDots(x){
 }
 
 
-function bounce(path, x, y, i){
+function bounce(path, i){
 	if( i < DURATION){
 
-		dot_x_pos = (createDots(i)*0.25*x)+50;
-		dot_y_pos = (createDots(i)*0.3*y)+300;
+		dot_x_pos = (createDots(i)*x_pos*.25);
+		dot_y_pos = (createDots(i)*y_pos*.25);
 
-		console.log(dot_x_pos);
+		path.setAttribute('d','M 50 0 Q ' + (50 + (createDots(i)*x_pos*.25)) + ' ' + (300 - (createDots(i)*y_pos*.25)) +' 50 600');
 
-		path.setAttribute('d','M 50 0 Q ' + dot_x_pos + ' ' + dot_y_pos +' 50 600');
-		
-		//path.setAttribute('d','M 50 0 Q ' + ((createDots(i)*0.25*x)+50) + ' ' + ((createDots(i)*0.3*y)+300) +' 50 600');
+		circle.setAttribute('cx', 50 + (createDots(i)*x_pos*.25));
+		circle.setAttribute('cy', 300 - (createDots(i)*y_pos*.25));
 
-		circle.setAttribute('cx', (createDots(i)*0.2*x)+50);
-		circle.setAttribute('cy', (createDots(i)*0.2*y)+300);
+		line.setAttribute('x2', 50 + (createDots(i)*x_pos*.25));
+		line.setAttribute('y2', 300 - (createDots(i)*y_pos*.25));
 
 		i++;
 
 		animationId = requestAnimationFrame(()=>{
-			bounce(path,x,y,i);
+			bounce(path, i);
 		});
 	}
 }
@@ -116,6 +115,6 @@ $('#box').mouseleave((e)=>{
 	cancelAnimationFrame(animationId);
 
 	animationId = requestAnimationFrame(()=>{
-		bounce(svg_path, dot_x_pos -50, dot_y_pos - 300, 0);
+		bounce(svg_path, 0);
 	});
 });
