@@ -9,13 +9,44 @@
 		<link rel="stylesheet" href="stylesheet.css">
 	</head>
 	<body>
-		<p>1 Probando texto</p>
-		<svg id="box" width="100" height="600" xmlns="http://www.w3.org/2000/svg">
-			<!--<path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>-->
-			<path id="path" d="M 50 0 Q 50 300 50 600" stroke="black" stroke-width="1" fill="transparent"/>
-			<circle id="circle" cx=50 cy="300" r="2"	stroke="red" stroke-width="2" fill="red" />
-			<line id="line" x1="50" y1="300" x2="50" y2="300" />
-		</svg>
+		<div id="hscroll">
+
+			<div class="project">
+				<div class="num">
+					<h2>1</h2>
+				</div>
+				<div class="text_sec">
+					<span class="title">ALESSI</span>
+					<span class="desc">The ExtraOrdinary Metal Collection</span>
+				</div>
+				<div class="arrow">
+					<svg viewBox="0 0 72 100">
+						<path style="fill:#191919;" d="M70.4,58.9L70.1,57l-0.2-0.9c0,0,0,0,0,0l-0.2-0.9c-18.7,3.4-27.6,13.4-31.9,22.7V3h-0.9H35h-0.9
+						v75.3c-4.2-9.7-13.2-20.2-31.9-23.2L1.9,57L1.7,58c0,0,0,0,0,0l-0.1,0.9c28.7,4.5,32.2,27.6,32.5,35.3c-0.1,1.7,0,2.7,0,2.8l0.9-0.1
+						v0l0.5,0l2.4,0.1c0,0,0-0.6,0-1.5v-2.5C38.4,84.4,42.5,63.9,70.4,58.9z"></path>
+					</svg>
+				</div>
+			</div>
+
+			<svg id="box" width="100" height="600" xmlns="http://www.w3.org/2000/svg">
+				<!--<path d="M 10 80 Q 95 10 180 80" stroke="black" fill="transparent"/>-->
+				<path id="path" d="M 50 0 Q 50 300 50 600" stroke="black" stroke-width="1" fill="transparent"/>
+				<circle id="circle" cx=50 cy="300" r="2"	stroke="red" stroke-width="2" fill="red" />
+				<line id="line" x1="50" y1="300" x2="50" y2="300" />
+			</svg>
+
+			<div class="project">
+				<div class="num">
+					<h2>2</h2>
+				</div>
+				<div class="text_sec">
+					<span class="title">SWATCH</span>
+					<span class="desc">60 BPM - The Sound Of Swatch</span>
+				</div>
+				<div class="arrow"></div>
+			</div>
+
+		</div>
 
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 		<script src="script.js"></script>
